@@ -1,0 +1,130 @@
+<!-- Name: Jonty Hood-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Leaks Photography</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header format for all subsequent pages-->
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"
+          ><img src="images/logo_v2.svg" alt="Logo Image"
+        /></a>
+
+        <!-- adding all of the navbar items/destinations-->
+        <ul class="navbar_menu">
+          <li class="navbar_items">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="navbar_items">
+            <a href="journeys.html">Journeys</a>
+          </li>
+          <li class="navbar_items">
+            <a href="equipment.html">Equipment</a>
+          </li>
+          <li class="navbar_items">
+            <a href="about.html">About</a>
+          </li>
+          <li class="navbar_items">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Creating a button to access a drop-down menu-->
+        <div class="navbar_toggleBtn">
+          <img src="images\delicious_hamburger.png" alt="hamburger menu icon" />
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact page Content: -->
+
+    <main>
+      <h1 class="pg-title-text">Contact</h1>
+      <h2 class="pg-subtitle-text">Let's get in touch</h2>
+      <section class="contact-content">
+        <div>
+          <p>Find me on instagram @phonto_monto!</p>
+          <img
+            src="images/other_images/contact-socials.png"
+            alt="Image displaying @phonto_monto's instagram page"
+          />
+        </div>
+
+        <!-- Setting up the contact form-->
+        <!-- Utilizes JS validation-->
+        <form
+          class="form-boxes"
+          name="contact_form"
+          onsubmit="return form_validator()"
+        >
+          <h1>Contact Form</h1>
+          <p>Enter your first name here:</p>
+          <input
+            type="text"
+            class="entry-box"
+            placeholder="First name"
+            name="name"
+          />
+          <p>Enter your last name here:</p>
+          <input
+            type="text"
+            class="entry-box"
+            placeholder="Last name"
+            name="last_name"
+          />
+          <p>Enter your email address here:</p>
+          <input
+            type="email"
+            required
+            minlength="8"
+            class="entry-box"
+            placeholder="...@mail.com"
+            id="email-input"
+          />
+          <p>Leave me a message:</p>
+          <textarea
+            id="long-input"
+            name="message"
+            rows="10"
+            cols="100"
+            placeholder="Enter your message here:"
+          ></textarea>
+
+          <button id="submit-form-button">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Live Clock -->
+      <time id="live-clock"></time>
+      <ul class="footer_menu">
+        <li class="navbar_items">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navbar_items">
+          <a href="journeys.html">Journeys</a>
+        </li>
+        <li class="navbar_items">
+          <a href="equipment.html">Equipment</a>
+        </li>
+        <li class="navbar_items">
+          <a href="about.html">About</a>
+        </li>
+        <li class="navbar_items">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <p>&copy; Jonty Hood</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Light Pink: ff928b
+Dark Blue: 4d7298
+Light Cyan: ecfff8
+Golden Yellow: e6af2e
+Dark Grey: 1e1a1d

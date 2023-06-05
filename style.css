@@ -1,0 +1,688 @@
+/* Setting the base properties for all website elements */
+* {
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  font-weight: 450;
+}
+
+/* Setting up the space for the header section */
+header {
+  margin-left: 2rem;
+  margin-right: 7rem;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+li {
+  list-style: None;
+}
+
+a,
+h1 {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #e6af2e;
+}
+
+.footer_menu a:hover {
+  color: #e6af2e;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo {
+  min-width: 12rem;
+}
+
+.navbar {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar_menu {
+  display: flex;
+  margin-left: 30px;
+  gap: 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_menu {
+  padding-top: 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  align-items: center;
+}
+
+#live-clock {
+  font-weight: bold;
+}
+
+/* footer items */
+footer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.navbar_toggleBtn {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+footer> p {
+  color: rgb(180, 180, 180);
+}
+
+/* generic page titling */
+.pg-title-text {
+  text-align: center;
+  font-size: calc(3em + 3vw);
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
+
+.pg-subtitle-text {
+  text-align: center;
+  font-size: calc(0.5em + 1vw);
+  margin-bottom: 1vw;
+  color: #e6e6e6;
+}
+
+/* Landing Page */
+
+.welcome-text {
+  max-width: 50%;
+  font-size: 160%;
+  padding-bottom: 23rem;
+}
+
+.journey-page {
+  animation: fade-in 0.1s ease-in;
+}
+.welcome-text h1 {
+  font-weight: bolder;
+  animation: fade-in 0.3s ease-in;
+}
+
+.welcome-text h2 {
+  animation: fade-in 1s ease-in;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-left: 3.2rem;
+  padding-bottom: 5rem;
+}
+
+.welcome-image-collection img {
+  align-items: center;
+  width: 20rem;
+  height: auto;
+}
+
+.welcome-image-collection {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-image_front {
+  margin-left: 10rem;
+}
+
+.journeys-button {
+  width: 10rem;
+  height: auto;
+  display: block;
+  text-align: center;
+  font-size: larger;
+  border: 2px #ff929b;
+  background-color: #ff929b;
+  padding: 12px 12px;
+  padding-bottom: 12px;
+}
+
+.journeys-button:hover {
+  animation: button 0.2s ease-in-out alternate;
+}
+
+/* Image Galleries */
+
+.gallery {
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 5;
+  column-gap: 0px;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  user-select: none;
+}
+
+.gallery img {
+  padding: 1vw;
+  cursor: pointer;
+  width: 100% !important;
+  height: auto !important;
+  user-select: none;
+  transition: 0.8s ease;
+  z-index: -1;
+}
+
+.gallery.active {
+  filter: grayscale();
+  filter: blur(20px);
+}
+
+.gallery img:hover {
+  filter: drop-shadow(10px 10px 100px #e6af2e);
+  transition: 0.4s ease;
+  scale: 1.1;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#back-button {
+  font-size: 3vh;
+  cursor: pointer;
+  margin-left: 3vh;
+  z-index: 4;
+  border-style: none;
+}
+/* Gallery Pop-Up functionality */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/* Mobile Interface for Journeys Galleries */
+@media (max-width: 1000px) {
+  .gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+
+  .gallery img {
+    padding: calc(0.5em + 2vw);
+    cursor: pointer;
+    width: 100% !important;
+    height: auto !important;
+    user-select: none;
+    transition: 0.8s ease;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/* animation */
+@keyframes button {
+  50% {
+    background-color: #e6af2e;
+  }
+  100% {
+    background-color: #ff929b;
+  }
+}
+
+.welcome-image-collection,
+.pg-subtitle-text,
+.journey-item,
+.equipment-box,
+#about-content,
+.gallery,
+#camera-systems-content,
+.contact-content {
+  animation: fade-in 2s ease;
+}
+
+.pg-title-text {
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateY(30px);
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+}
+
+/* Universal Mobile */
+@media (max-width: 1050px) {
+  .logo {
+    padding-top: 0.1rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.1rem;
+  }
+
+  .journey-item > a {
+    width: calc(1em + 7vw);
+    height: auto;
+  }
+
+  .navbar_menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+    position: fixed;
+    right: 3vh;
+    top: 2vh;
+    float: right;
+    box-shadow: 0.5vh 0.5vh 1vh#e6af2e;
+    margin: 0px;
+  }
+
+  .navbar_toggleBtn > img {
+    display: block;
+    max-height: 15vw;
+    height: auto;
+  }
+
+  .navbar_toggleBtn > img:hover {
+    scale: 1.1;
+    transition: 0.1s ease;
+  }
+
+  .navbar_menu.active {
+    transition-property: all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    background-color: #1a1a1a;
+    padding: 10px;
+    box-shadow: 1px 10px 50px #e6af2e;
+    gap: 25px;
+  }
+
+  .footer_menu {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar_items {
+    padding-right: 0px;
+  }
+
+  .navbar_toggleBtn.active {
+    color: #e6af2e;
+  }
+
+  /* Landing-Page Mobile */
+  .welcome-content {
+    flex-direction: column;
+    margin-left: 0rem;
+    font-size: 60%;
+    text-align: center;
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .journeys-button {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    font-size: larger;
+    border: 2px #ff929b;
+    background-color: #ff929b;
+    padding: 12px 12px;
+    padding-bottom: 12px;
+  }
+
+  .welcome-image-collection img {
+    align-items: center;
+    width: 40%;
+    height: auto;
+  }
+
+  .welcome-image_front {
+    margin-left: 0;
+  }
+
+  /* Contact page mobile */
+
+  .contact-content {
+    flex-direction: column-reverse;
+  }
+  .contact-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #equipment-options {
+    flex-direction: column;
+  }
+
+  /* about me mobile */
+  #about-me-text {
+    max-width: 90%;
+  }
+
+  #value {
+    text-align: center;
+  }
+
+  #about-me-text > p {
+    font-size: smaller;
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+/* Journeys Page */
+.journey-item-box img {
+  width: calc(2em + 17vw);
+  height: auto;
+}
+
+.journey-item-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(0.5em + 1vw);
+}
+.journey-thumbnails {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.journey-box-text {
+  border: 10px solid #e6af2e;
+  background-color: #e6af2e;
+}
+.journey-thumbnails li {
+  border: 10px solid #fff;
+  border-bottom-width: 0rem;
+}
+
+/* Contact Page */
+.contact-content {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(3em + 13vw);
+}
+
+.contact-content div img {
+  max-width: calc(2em + 28vw);
+  margin-top: 1rem;
+}
+
+.entry-box {
+  font-size: calc(1em + 0.5vw);
+  border: 0.3vh solid rgb(230, 175, 46, 0.7);
+}
+
+.form-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 30vh;
+}
+
+.contact-content p {
+  margin-bottom: -0.5vh;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#email-input {
+  width: 40vh;
+}
+
+.entry-box:hover {
+  transition: 0.15s ease;
+  filter: invert();
+}
+
+#long-input {
+  font-size: large;
+  border: 0.3vh outset rgb(230, 175, 46, 0.7);
+}
+
+#submit-form-button {
+  max-height: 20vh;
+  min-height: 5vh;
+  font-size: large;
+  border: 0.3vh outset rgb(230, 175, 46, 0.7);
+  background-color: rgb(230, 175, 46);
+}
+
+.form-boxes > h1 {
+  font-weight: bolder;
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: -1vh;
+}
+
+/* Equipment Page Content */
+#equipment-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.equipment-box > img {
+  max-width: calc(10em + 23vw);
+}
+
+#equipment-options > a {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #e6af2e;
+}
+
+#equipment-options p {
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: #e6af2e;
+}
+
+/* Camera Systems Content */
+#table-key {
+  display: flex;
+  background-color: #e6af2e;
+  margin: 0 0 0 0;
+  justify-content: center;
+}
+
+#key {
+  background-color: #e6af2e;
+  border: calc(0.2em + 0.5vw) solid #e6af2e;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: calc(1em + 1vw);
+  width: calc(3em + 50vw);
+}
+
+#lenses {
+  max-width: 90%;
+  height: auto;
+  margin: 5vh 5vh 2vh 2vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lens-type {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#value {
+  background-color: #1a1a1a;
+  border: calc(0.2em + 0.5vw) solid #e6af2e;
+  color: #e6e6e6;
+  font-weight: bold;
+  font-size: calc(1em + 1vw);
+  max-width: calc(3em + 50vw);
+  width: 100%;
+}
+
+#camera-systems-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* About Page */
+#jonty-fuji {
+  min-width: 50vh;
+}
+
+#about-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about-me-text {
+  display: block;
+  max-width: 55%;
+  font-size: 1.7rem;
+  text-align: justify;
+}
+
+@media (max-width: 383px) {
+  .logo {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  header {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}

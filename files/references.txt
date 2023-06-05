@@ -1,0 +1,22 @@
+// menu icon used
+OpenClipart https://freesvg.org/menu-icon-28851 07/05/2023
+
+// vanilla-tilt.js plugin
+https://micku7zu.github.io/vanilla-tilt.js/ {
+    contributors:   Livio Brunner
+                    Oleg Postoev
+                    Matteo Rigon
+                    Corey Austin
+                    Sander Moolin
+                    rrroyal
+                    Andžs Pilskalns
+
+}
+
+//
+
+
+//Camera specifications from
+https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d750.html#tab-ProductDetail-ProductTabs-TechSpecs
+https://eastinnovations.com/web-design-articles/the-true-purpose-of-the-homepage/#:~:text=The%20purpose%20of%20the%20homepage,pages%20that%20contain%20necessary%20information
+https://www.bhphotovideo.com/c/product/856058-REG/Nikon_25496_D3200_DSLR_Camera_With.html
