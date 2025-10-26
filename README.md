@@ -1,4 +1,4 @@
-# jhood34.github.io
+# jontyhood.com
 My first site! Check out some of the photos I've taken.
 
 
